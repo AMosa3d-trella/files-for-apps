@@ -1,0 +1,42 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "SqsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sqs:SetQueueAttributes",
+                "sqs:ReceiveMessage",
+                "sqs:DeleteMessage",
+                "sqs:SendMessage",
+                "sqs:GetQueueUrl",
+                "sqs:GetQueueAttributes",
+                "sqs:ChangeMessageVisibility",
+                "sqs:TagQueue"
+            ],
+            "Resource": [ 
+              "arn:aws:sqs:eu-central-1:000000000000:test-queue"
+            ]
+        },
+        {
+            "Sid": "SnsAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sns:GetTopicAttributes",
+                "sns:Publish",
+                "sns:Subscribe"
+            ],
+            "Resource": [
+              "arn:aws:sns:eu-central-1:000000000000:test-topic"
+            ]
+        },
+        {
+            "Sid": "SnsListAccess",
+            "Effect": "Allow",
+            "Action": [
+                "sns:ListTopics"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
