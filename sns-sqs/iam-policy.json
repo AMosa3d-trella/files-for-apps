@@ -15,7 +15,7 @@
                 "sqs:TagQueue"
             ],
             "Resource": [ 
-              "arn:aws:sqs:eu-central-1:000000000000:test-queue"
+              "*"
             ]
         },
         {
@@ -27,7 +27,7 @@
                 "sns:Subscribe"
             ],
             "Resource": [
-              "arn:aws:sns:eu-central-1:000000000000:test-topic"
+              "*"
             ]
         },
         {
